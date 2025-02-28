@@ -1,15 +1,19 @@
 {
   "name": "vp-very-simple-encrypt-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["vuepress", "plugin"],
+  "keywords": [
+    "vuepress",
+    "plugin"
+  ],
   "author": "",
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "@vuepress/utils": "^2.0.0-rc.19",
     "ant-design-vue": "^4.2.6",
     "vuepress": "2.0.0-rc.19"
   },

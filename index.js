@@ -1,15 +1,40 @@
 
 import {path} from '@vuepress/utils'
+import fs from 'fs'
 
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+function isDirectoryStr(pathStr) {
+    try {
+        return pathStr.endsWith("/");
+    } catch (err) {
+        console.error(err);
+    }
+    return false;
+}
+function areFilesInSameDir(pathBob, pathTom) {
+    return path.dirname(pathBob) === path.dirname(pathTom)
+}
+function isInDir(pathStr, dirPathStr) {
+    const relativePath = path.relative(dirPathStr, pathStr);
+    return !relativePath.startsWith("..") && !path.isAbsolute(relativePath);
+}
+// try to find a encrypting config
 function matchPathAgainstEncryptConfig(pagePath, configs) {
     for (let config of configs) {
         let pagePathOfConfig = config["file"]
+        const protectDirectoryIfIndex = config["protectDirectoryIfIndex"]
         if (pagePathOfConfig === pagePath) {
+            return config
+        }
+        if (isDirectoryStr(pagePathOfConfig) && isInDir(pagePath,pagePathOfConfig)) {
+            return config
+        }
+        // don't do recursively
+        if (protectDirectoryIfIndex && pagePathOfConfig.endsWith("README.md") && areFilesInSameDir(pagePath, pagePathOfConfig)) {
             return config
         }
     }

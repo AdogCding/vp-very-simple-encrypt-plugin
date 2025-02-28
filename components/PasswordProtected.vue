@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { defineProps, ref, watchEffect } from 'vue';
+import { ref, watchEffect } from 'vue';
 import PasswordBlock from './PasswordBlock.vue'
 const props = defineProps({
   password:String
