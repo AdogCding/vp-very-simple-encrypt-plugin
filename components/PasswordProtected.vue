@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { ref, watchEffect } from 'vue';
+import { ref } from 'vue';
 import PasswordBlock from './PasswordBlock.vue'
 const props = defineProps({
   password:String
@@ -22,6 +22,8 @@ const unlocked = ref(false)
 function unlockBlock(){
   unlocked.value = true
 }
+// 检查是否有保存好的密码
+sessionStorage.getItem("password") === props.password && unlockBlock()
 </script>
 
 <style scoped>
