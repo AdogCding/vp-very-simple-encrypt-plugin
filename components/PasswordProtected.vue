@@ -23,7 +23,9 @@ function unlockBlock(){
   unlocked.value = true
 }
 // 检查是否有保存好的密码
-sessionStorage.getItem("password") === props.password && unlockBlock()
+if (typeof window !== 'undefined') {
+  sessionStorage.getItem("password") === props.password && unlockBlock()
+}
 </script>
 
 <style scoped>
