@@ -17,5 +17,9 @@
     "ant-design-vue": "^4.2.6",
     "vuepress": "2.0.0-rc.19"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "unplugin-auto-import": "^19.1.2",
+    "unplugin-vue-components": "^28.4.1"
+  }
 }

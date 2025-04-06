@@ -12,8 +12,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import PasswordBlock from './PasswordBlock.vue'
+import { ref,defineAsyncComponent } from 'vue';
+const PasswordBlock = defineAsyncComponent(() => import('./PasswordBlock.vue'))
 const props = defineProps({
   password:String
 })
