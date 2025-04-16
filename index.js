@@ -21,7 +21,7 @@ function isInDir(pathStr, dirPathStr) {
     const relativePath = path.relative(dirPathStr, pathStr);
     return !relativePath.startsWith("..") && !path.isAbsolute(relativePath);
 }
-// try to find a encrypting config
+// try to find an encrypting config
 function matchPathAgainstEncryptConfig(pagePath, configs) {
     for (let config of configs) {
         let pagePathOfConfig = config["file"]
