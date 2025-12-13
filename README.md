@@ -1,7 +1,31 @@
 # vp-very-simple-encrypt-plugin
 
+## Warning: This plugin merely performs encryption on the front end. It is extremely easy to break and cannot guarantee the security of your files
 
-自己用的vuepress插件，要输入正确的密码才能查看文章内容
+## install it 
+```bash
+npm install vp-very-simple-encrypt-plugin
+```
 
-encryptPaths::list 要保护的文件的列表
-protectDirectoryIfIndex::boolean 配置的要保护的文件是README文件，那么同级的文件都会受到保护
+## define the protection scope and set a password
+
+```javascript
+
+export default defineUserConfig({
+  plugins: [
+    verySimpleEncrypt({
+      encryptPaths: [
+        {
+          file: "/busszing/README.md",
+          protectDirectoryIfIndex: true,
+          password: "qwer"
+        },
+      ]
+    }),
+  ]
+})
+```
+`file` can accept 
+1. a single file name
+2. a directory name
+3. `README.md`, which is the index file of a directory. But `protectDirectoryIfIndex` must be `true`, otherwise, this config is invalid
