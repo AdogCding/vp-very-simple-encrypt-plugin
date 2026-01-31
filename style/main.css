@@ -1,0 +1,8 @@
+/* src/styles/main.css */
+@config "../tailwind.config.js";
+
+/* 1. 引入主题变量 */
+@import "tailwindcss/theme" layer(theme);
+
+/* 2. 引入工具类 (utilities) */
+@import "tailwindcss/utilities" layer(utilities);

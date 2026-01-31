@@ -2,24 +2,19 @@
   <div v-if="unlocked">
     <slot />
   </div>
-  <div class="password-protection" v-else>
-    <a-flex gap="middle" vertical>
-      <a-flex :justify=center :align=center>
-        <PasswordBlock :correct-password="password" @unlock="unlockBlock"></PasswordBlock>
-      </a-flex>
-    </a-flex>
+  <div class="vptw:flex vptw:flex-col vptw:items-center vptw:justify-center vptw:min-h-screen vptw:p-4" v-else>
+    <PasswordBlock :correct-password="password" @unlock="unlockBlock"></PasswordBlock>
   </div>
 </template>
 
 <script setup>
-import { ref,defineAsyncComponent } from 'vue';
+import { ref, defineAsyncComponent } from 'vue';
 const PasswordBlock = defineAsyncComponent(() => import('./PasswordBlock.vue'))
 const props = defineProps({
-  password:String
+  password: String
 })
-const center = "center"
 const unlocked = ref(false)
-function unlockBlock(){
+function unlockBlock() {
   unlocked.value = true
 }
 // 检查是否有保存好的密码
@@ -28,8 +23,4 @@ if (typeof window !== 'undefined') {
 }
 </script>
 
-<style scoped>
-.password-protection {
-  margin-top: 10%;
-}
-</style>
+<style scoped></style>

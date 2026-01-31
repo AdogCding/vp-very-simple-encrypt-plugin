@@ -1,0 +1,243 @@
+/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme {
+  :root, :host {
+    --vptw-color-red-500: oklch(63.7% 0.237 25.331);
+    --vptw-color-gray-100: oklch(96.7% 0.003 264.542);
+    --vptw-color-gray-300: oklch(87.2% 0.01 258.338);
+    --vptw-color-gray-400: oklch(70.7% 0.022 261.325);
+    --vptw-color-gray-600: oklch(44.6% 0.03 256.802);
+    --vptw-color-gray-800: oklch(27.8% 0.033 256.848);
+    --vptw-color-white: #fff;
+    --vptw-spacing: 0.25rem;
+    --vptw-text-xs: 0.75rem;
+    --vptw-text-xs--line-height: calc(1 / 0.75);
+    --vptw-text-sm: 0.875rem;
+    --vptw-text-sm--line-height: calc(1.25 / 0.875);
+    --vptw-text-xl: 1.25rem;
+    --vptw-text-xl--line-height: calc(1.75 / 1.25);
+    --vptw-font-weight-normal: 400;
+    --vptw-font-weight-medium: 500;
+    --vptw-radius-md: 0.375rem;
+    --vptw-radius-lg: 0.5rem;
+  }
+}
+@layer utilities {
+  .vptw\:absolute {
+    position: absolute;
+  }
+  .vptw\:relative {
+    position: relative;
+  }
+  .vptw\:m-0 {
+    margin: calc(var(--vptw-spacing) * 0);
+  }
+  .vptw\:mx-8 {
+    margin-inline: calc(var(--vptw-spacing) * 8);
+  }
+  .vptw\:mt-1 {
+    margin-top: calc(var(--vptw-spacing) * 1);
+  }
+  .vptw\:mt-2 {
+    margin-top: calc(var(--vptw-spacing) * 2);
+  }
+  .vptw\:ml-2 {
+    margin-left: calc(var(--vptw-spacing) * 2);
+  }
+  .vptw\:flex {
+    display: flex;
+  }
+  .vptw\:hidden {
+    display: none;
+  }
+  .vptw\:h-4 {
+    height: calc(var(--vptw-spacing) * 4);
+  }
+  .vptw\:min-h-screen {
+    min-height: 100vh;
+  }
+  .vptw\:w-4 {
+    width: calc(var(--vptw-spacing) * 4);
+  }
+  .vptw\:w-full {
+    width: 100%;
+  }
+  .vptw\:max-w-\[400px\] {
+    max-width: 400px;
+  }
+  .vptw\:cursor-pointer {
+    cursor: pointer;
+  }
+  .vptw\:flex-col {
+    flex-direction: column;
+  }
+  .vptw\:items-center {
+    align-items: center;
+  }
+  .vptw\:justify-center {
+    justify-content: center;
+  }
+  .vptw\:space-y-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--vptw-spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--vptw-spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .vptw\:space-x-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--vptw-spacing) * 2) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--vptw-spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
+  .vptw\:overflow-hidden {
+    overflow: hidden;
+  }
+  .vptw\:rounded-lg {
+    border-radius: var(--vptw-radius-lg);
+  }
+  .vptw\:rounded-md {
+    border-radius: var(--vptw-radius-md);
+  }
+  .vptw\:border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .vptw\:border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .vptw\:border-none {
+    --tw-border-style: none;
+    border-style: none;
+  }
+  .vptw\:border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
+  }
+  .vptw\:border-gray-100 {
+    border-color: var(--vptw-color-gray-100);
+  }
+  .vptw\:border-gray-300 {
+    border-color: var(--vptw-color-gray-300);
+  }
+  .vptw\:bg-transparent {
+    background-color: transparent;
+  }
+  .vptw\:bg-white {
+    background-color: var(--vptw-color-white);
+  }
+  .vptw\:p-0 {
+    padding: calc(var(--vptw-spacing) * 0);
+  }
+  .vptw\:p-4 {
+    padding: calc(var(--vptw-spacing) * 4);
+  }
+  .vptw\:p-8 {
+    padding: calc(var(--vptw-spacing) * 8);
+  }
+  .vptw\:px-3 {
+    padding-inline: calc(var(--vptw-spacing) * 3);
+  }
+  .vptw\:px-4 {
+    padding-inline: calc(var(--vptw-spacing) * 4);
+  }
+  .vptw\:px-8 {
+    padding-inline: calc(var(--vptw-spacing) * 8);
+  }
+  .vptw\:py-2 {
+    padding-block: calc(var(--vptw-spacing) * 2);
+  }
+  .vptw\:pt-2 {
+    padding-top: calc(var(--vptw-spacing) * 2);
+  }
+  .vptw\:pt-8 {
+    padding-top: calc(var(--vptw-spacing) * 8);
+  }
+  .vptw\:pb-4 {
+    padding-bottom: calc(var(--vptw-spacing) * 4);
+  }
+  .vptw\:text-center {
+    text-align: center;
+  }
+  .vptw\:text-sm {
+    font-size: var(--vptw-text-sm);
+    line-height: var(--tw-leading, var(--vptw-text-sm--line-height));
+  }
+  .vptw\:text-xl {
+    font-size: var(--vptw-text-xl);
+    line-height: var(--tw-leading, var(--vptw-text-xl--line-height));
+  }
+  .vptw\:text-xs {
+    font-size: var(--vptw-text-xs);
+    line-height: var(--tw-leading, var(--vptw-text-xs--line-height));
+  }
+  .vptw\:font-medium {
+    --tw-font-weight: var(--vptw-font-weight-medium);
+    font-weight: var(--vptw-font-weight-medium);
+  }
+  .vptw\:font-normal {
+    --tw-font-weight: var(--vptw-font-weight-normal);
+    font-weight: var(--vptw-font-weight-normal);
+  }
+  .vptw\:text-gray-400 {
+    color: var(--vptw-color-gray-400);
+  }
+  .vptw\:text-gray-600 {
+    color: var(--vptw-color-gray-600);
+  }
+  .vptw\:text-gray-800 {
+    color: var(--vptw-color-gray-800);
+  }
+  .vptw\:text-red-500 {
+    color: var(--vptw-color-red-500);
+  }
+  .vptw\:placeholder-gray-300 {
+    &::placeholder {
+      color: var(--vptw-color-gray-300);
+    }
+  }
+  .vptw\:transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .vptw\:outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .vptw\:select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
+      --tw-space-x-reverse: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+    }
+  }
+}
